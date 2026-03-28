@@ -1,0 +1,60 @@
+{
+  "name": "MultiplayerForMCPE",
+  "slug": "multiplayer-for-mcpe",
+  "version": "1.0.0",
+  "description": "Multiplayer for Minecraft PE",
+  "main": "App.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo run:android",
+    "build:apk": "eas build -p android --profile preview",
+    "build:aab": "eas build -p android --profile production"
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "1.21.0",
+    "expo": "~51.0.0",
+    "expo-document-picker": "~12.0.0",
+    "expo-file-system": "~17.0.0",
+    "expo-image-picker": "~15.0.0",
+    "expo-status-bar": "~1.12.0",
+    "react": "18.2.0",
+    "react-native": "0.74.0",
+    "socket.io-client": "^4.6.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.0"
+  },
+  "expo": {
+    "name": "Multiplayer for MCPE",
+    "slug": "multiplayer-for-mcpe",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#080c08"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#080c08"
+      },
+      "package": "com.mcpe.multiplayer",
+      "permissions": [
+        "INTERNET",
+        "ACCESS_NETWORK_STATE",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "QUERY_ALL_PACKAGES"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        { "photosPermission": "Cho phép chọn ảnh đại diện" }
+      ]
+    ]
+  }
+}
